@@ -27,8 +27,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 
-app.listen(process.env.PORT, function (req, res) {
-  console.log("Server is listening on port", process.env.PORT);
+app.listen(process.env.PORT || 3000, function (req, res) {
+  console.log("Server is listening on port", process.env.PORT || 3000);
 })
 
 // catch 404 and forward to error handler
